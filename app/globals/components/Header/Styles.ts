@@ -2,21 +2,18 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     headerContainer: {
-        position: 'absolute',
-        width: '100%', 
-        height: '10%', 
-        elevation: 3, 
-        shadowColor: '#FFF', 
-        shadowOpacity: 0.4,
-        borderBottomLeftRadius: 15,
-        borderBottomRightRadius: 15
+        width: '100%',
+        height: 90,
+        elevation: 3,
+        shadowColor: '#FFF',
+        shadowOpacity: 0.4
     },
     linearGradient: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        elevation: 3, 
-        shadowColor: '#FFF', 
+        elevation: 3,
+        shadowColor: '#FFF',
         shadowOpacity: 0.4,
         borderBottomLeftRadius: 15,
         borderBottomRightRadius: 15

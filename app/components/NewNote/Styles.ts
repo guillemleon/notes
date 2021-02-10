@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    
+
     linearGradient: {
       flex: 1,
       justifyContent: 'flex-end',
@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     },
     content: {
         width: '95%',
-        height: '90%',
+        height: '100%',
         justifyContent: 'flex-start',
         alignItems: 'center'
     },
@@ -41,7 +41,8 @@ export const styles = StyleSheet.create({
         color: '#FFF'
     },
     titleContainer: {
-        height: '15%',
+        maxHeight: '15%',
+        minHeight: '14%',
         width: '95%',
         marginTop: '5%',
         borderRadius: 15,
@@ -60,7 +61,9 @@ export const styles = StyleSheet.create({
         borderBottomWidth: 1,
         width: '100%',
         height: '50%',
-        fontSize: 21,
+        fontSize: 16,
+        textAlignVertical: 'bottom',
+        padding: 0
     },
     noteInputContainer: {
         height: '60%',
@@ -77,7 +80,8 @@ export const styles = StyleSheet.create({
     noteInput: {
         height: '80%',
         width: '100%',
-        marginTop: 15
+        marginTop: 15,
+        textAlignVertical: 'top'
     }
 
   });

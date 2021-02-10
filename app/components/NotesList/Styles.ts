@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    
+
     linearGradient: {
       flex: 1,
       justifyContent: 'flex-end',
@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     },
     content: {
         width: '95%',
-        height: '80%',
+        height: '90%',
         marginBottom: '5%'
     },
     buttonGradient: {
