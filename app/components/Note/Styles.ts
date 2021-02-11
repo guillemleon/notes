@@ -82,6 +82,7 @@ export const styles = StyleSheet.create({
     editContainer: {
         width: '100%',
         height: '20%',
+        flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         paddingHorizontal: 20
@@ -97,6 +98,39 @@ export const styles = StyleSheet.create({
     editIcon: {
         fontSize: 30,
         color: '#FFF'
+    },
+    save: {
+        width: 60,
+        height: 60,
+        backgroundColor: '#1DB954',
+        borderRadius: 50,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    saveIcon: {
+        fontSize: 30,
+        color: '#FFF'
+    },
+    changeColor: {
+        width: 60,
+        height: 60,
+        backgroundColor: '#00a4ff',
+        borderRadius: 50,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    colorIcon: {
+        fontSize: 30,
+        color: '#FFF'
+    },
+    colorModal: {
+        width: '100%',
+        borderWidth: 1,
+        height: '100%',
+        backgroundColor: 'rgba(255,255,255,0.2)',
+        position: 'absolute',
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 
   });

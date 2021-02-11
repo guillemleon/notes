@@ -15,21 +15,24 @@ class NotesList extends PureComponent<any, any> {
 
         this.state = {
             notes: undefined,
-            ready: false
+            ready: false,
+
         }
 
-        this.getNotes();
+        this.getNotes()
 
     }
 
-    render() {
-
+    componentDidUpdate(prevProps: Readonly<any>, prevState: Readonly<any>, snapshot?: any) {
         if(typeof (this.state.notes) === 'string') {
             this.setState({
                 notes: JSON.parse(this.state.notes)
             }, () => {
             })
         }
+    }
+
+    render() {
 
         return (
             <View style={{width: '100%', height: '100%'}}>

@@ -95,7 +95,6 @@ class NewNote extends PureComponent<any, State> {
             note["id"] = notes[notes.length-1].id + 1;
             notes.push(note)
             console.log(notes);
-            ;
             await AsyncStorage.setItem('notes', JSON.stringify(notes));
         }
 
