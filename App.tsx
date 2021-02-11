@@ -9,6 +9,7 @@ import Home from "./app/components/Home/Home";
 import NotesList from "./app/components/NotesList/NotesList";
 import NewNote from "./app/components/NewNote/NewNote";
 import LinearGradient from "react-native-linear-gradient";
+import Note from "./app/components/Note/Note";
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,10 @@ const AuthStack = () => (
           options={{
               headerShown: false
           }}/>
+        <Stack.Screen name="Note" component={Note}
+        options={{
+            headerShown: false
+        }}/>
     </Stack.Navigator>
 );
 
@@ -42,11 +47,11 @@ class App extends PureComponent<any, any> {
     return (
       <View style={{width: "100%", height: "100%"}}>
         <Header />
-        <LinearGradient colors={['#02aab0', '#00cdac']} style={{flex: 1}}>
+        <View style={{flex: 1}}>
           <NavigationContainer>
             <AuthStack/>
           </NavigationContainer>
-        </LinearGradient>
+        </View>
       </View>
     )
   }

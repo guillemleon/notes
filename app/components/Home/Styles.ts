@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
     linearGradient: {
       flex: 1,
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      backgroundColor: '#FFF'
     },
     content: {
         width: '95%',

@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
     linearGradient: {
       flex: 1,
       justifyContent: 'flex-end',
-      alignItems: 'center'
+      alignItems: 'center',
+      backgroundColor: '#FFF'
     },
     content: {
         width: '95%',
@@ -23,7 +24,7 @@ export const styles = StyleSheet.create({
     },
     button: {
         width: '100%',
-        height: 120,
+        height: 85,
         marginVertical: 10,
         borderRadius: 15,
         shadowColor: '#000',

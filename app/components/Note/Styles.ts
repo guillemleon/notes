@@ -2,17 +2,12 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
 
-    linearGradient: {
-      flex: 1,
-      justifyContent: 'flex-end',
-      alignItems: 'center',
-      backgroundColor: '#FFF'
-    },
     content: {
-        width: '95%',
+        width: '100%',
         height: '100%',
         justifyContent: 'flex-start',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: '#FFF'
     },
     buttonGradient: {
         paddingHorizontal: 40,
@@ -83,6 +78,25 @@ export const styles = StyleSheet.create({
         width: '100%',
         marginTop: 15,
         textAlignVertical: 'top'
+    },
+    editContainer: {
+        width: '100%',
+        height: '20%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingHorizontal: 20
+    },
+    edit: {
+        width: 60,
+        height: 60,
+        backgroundColor: '#f55f4b',
+        borderRadius: 50,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    editIcon: {
+        fontSize: 30,
+        color: '#FFF'
     }
 
   });

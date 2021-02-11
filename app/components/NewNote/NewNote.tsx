@@ -31,9 +31,9 @@ class NewNote extends PureComponent<any, State> {
 
         return (
             <View style={{width: '100%', height: '100%'}}>
-                <LinearGradient colors={['#02aab0', '#00cdac']} style={styles.linearGradient}>
+                <View style={styles.linearGradient}>
 
-                        <KeyboardAvoidingView style={styles.titleContainer}>
+                        <View style={styles.titleContainer}>
                             <Text style={styles.titleLabel}>Title</Text>
                             <TextInput
                                 style={styles.titleInput}
@@ -43,7 +43,7 @@ class NewNote extends PureComponent<any, State> {
                                     })
                                 }}
                             />
-                        </KeyboardAvoidingView>
+                        </View>
 
                         <View style={styles.noteInputContainer}>
                         <Text style={styles.titleLabel}>Note</Text>
@@ -62,7 +62,7 @@ class NewNote extends PureComponent<any, State> {
                             style={styles.button}
                             onPress={() => {this.storeNote()}}
                         >
-                            <LinearGradient colors={['#D5F0A5', '#74CFA0']} style={styles.buttonGradient} start={{ x: 2, y: 0 }} end={{ x: 0, y: 1 }}>
+                            <LinearGradient colors={['#9E1711', '#D65D42']} style={styles.buttonGradient} start={{ x: 2, y: 0 }} end={{ x: 0, y: 1 }}>
                                 <Text style={styles.buttonTitle}>ADD</Text>
                                 <Icon
                                     name={'plus-circle'}
@@ -71,7 +71,7 @@ class NewNote extends PureComponent<any, State> {
                             </LinearGradient>
                         </TouchableOpacity>
 
-                </LinearGradient>
+                </View>
             </View>
         )
 
@@ -80,17 +80,22 @@ class NewNote extends PureComponent<any, State> {
     private async storeNote() {
 
         const {title, content} = this.state;
+        let firstId = 1;
 
-        let note = {title: title, content: content}
+        let note: any = {title: title, content: content}
 
         let storedNotes = await AsyncStorage.getItem('notes')
         if(!storedNotes) {
             let notes = new Array();
+            note["id"] = firstId;
             notes.push(note);
             await AsyncStorage.setItem('notes', JSON.stringify(notes));
         } else {
             let notes = JSON.parse(storedNotes);
-            notes.push(note);
+            note["id"] = notes[notes.length-1].id + 1;
+            notes.push(note)
+            console.log(notes);
+            ;
             await AsyncStorage.setItem('notes', JSON.stringify(notes));
         }
 

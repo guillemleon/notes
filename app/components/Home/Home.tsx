@@ -16,7 +16,7 @@ class Home extends PureComponent<any, any> {
 
         return (
             <View style={{width: '100%', height: '100%'}}>
-                <LinearGradient colors={['#02aab0', '#00cdac']} style={styles.linearGradient}>
+                <View style={styles.linearGradient}>
                     <View style={styles.content}>
                         
                         <TouchableOpacity 
@@ -24,7 +24,7 @@ class Home extends PureComponent<any, any> {
                             style={styles.button}
                             onPress={() => {this.handleContinue('NotesList')}}    
                         >
-                            <LinearGradient colors={['#D5F0A5', '#74CFA0']} style={styles.buttonGradient} start={{ x: 2, y: 0 }} end={{ x: 0, y: 1 }}>
+                            <LinearGradient colors={['#9E1711', '#D65D42']} style={styles.buttonGradient} start={{ x: 2, y: 0 }} end={{ x: 0, y: 1 }}>
                                 <Text style={styles.buttonTitle}>MY NOTES</Text>
                                 <Icon 
                                     name={'chevron-right'}
@@ -38,7 +38,7 @@ class Home extends PureComponent<any, any> {
                             style={styles.button}
                             onPress={() => {this.handleContinue('NewNote')}} 
                         >
-                            <LinearGradient colors={['#D5F0A5', '#74CFA0']} style={styles.buttonGradient} start={{ x: 2, y: 0 }} end={{ x: 0, y: 1 }}>
+                            <LinearGradient colors={['#9E1711', '#D65D42']} style={styles.buttonGradient} start={{ x: 2, y: 0 }} end={{ x: 0, y: 1 }}>
                                 <Text style={styles.buttonTitle}>NEW NOTE</Text>
                                 <Icon 
                                     name={'plus-circle'}
@@ -48,7 +48,7 @@ class Home extends PureComponent<any, any> {
                         </TouchableOpacity>
                     
                     </View>
-                </LinearGradient>
+                </View>
             </View>
         )
 
