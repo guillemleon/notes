@@ -54,7 +54,7 @@ class Note extends PureComponent<any, State> {
                     <Text style={styles.titleLabel}>{this.state.title}</Text>
                 </View>
 
-                <View style={styles.noteInputContainer}>
+                <View style={[styles.noteInputContainer, {backgroundColor: this.state.noteColor}]}>
                     <Text style={styles.titleLabel}>Note</Text>
                     <View
                         style={styles.noteInput}
@@ -97,7 +97,7 @@ class Note extends PureComponent<any, State> {
                     />
                 </View>
 
-                <View style={styles.noteInputContainer}>
+                <View style={[styles.noteInputContainer, {backgroundColor: this.state.noteColor}]}>
                     <Text style={styles.titleLabel}>Note</Text>
                     <TextInput
                         style={styles.noteInput}
@@ -167,13 +167,50 @@ class Note extends PureComponent<any, State> {
 
         return (
             <Modal
-                style={styles.colorModal}
                 transparent={true}
                 visible={this.state.showModal}
             >
-                <View style={{width: '80%', height: '80%', backgroundColor: '#FFF', alignSelf: 'center'}}></View>
+                <TouchableOpacity
+                  activeOpacity={1}
+                  style={styles.modalContainer}
+                  onPress={() => {
+                    this.setState({
+                      showModal: false
+                    })
+                  }}
+                >
+                  <View style={styles.colorModal}>
+                    {this.getColors().map((item, index) => {
+                      return (
+                        <TouchableOpacity
+                          style={{
+                            width: '25%',
+                            height: '20%',
+                            backgroundColor: item,
+                            borderRadius: 7
+                          }}
+                          onPress={() => {
+                            this.setState({
+                              showModal: false,
+                              noteColor: item
+                            })
+                          }}
+                        />
+                      )
+                    })}
+                  </View>
+                </TouchableOpacity>
             </Modal>
         )
+
+    }
+
+    private getColors() {
+
+      return ['red','blue','green','yellow','pink','purple',
+        'black','gray','lightblue','darkblue','orange','white','darkblue',
+        'yellow','blue','black','lightblue','pink','purple','green',
+      ]
 
     }
 

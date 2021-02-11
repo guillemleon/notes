@@ -68,7 +68,6 @@ export const styles = StyleSheet.create({
         borderRadius: 15,
         paddingVertical: 10,
         paddingHorizontal: 30,
-        backgroundColor: '#FFF',
         justifyContent: 'flex-start',
         alignItems: 'center',
         elevation: 5
@@ -105,7 +104,8 @@ export const styles = StyleSheet.create({
         backgroundColor: '#1DB954',
         borderRadius: 50,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginHorizontal: 5
     },
     saveIcon: {
         fontSize: 30,
@@ -117,20 +117,29 @@ export const styles = StyleSheet.create({
         backgroundColor: '#00a4ff',
         borderRadius: 50,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginHorizontal: 5
     },
     colorIcon: {
         fontSize: 30,
         color: '#FFF'
     },
     colorModal: {
-        width: '100%',
-        borderWidth: 1,
-        height: '100%',
-        backgroundColor: 'rgba(255,255,255,0.2)',
-        position: 'absolute',
+        width: '80%',
+        height: '50%',
+        backgroundColor: 'rgb(255,255,255)',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        elevation: 3,
+        borderRadius: 15,
+        flexDirection: 'row',
+        flexWrap: 'wrap'
+    },
+    modalContainer: {
+        width: '100%',
+        height: '100%',
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 
   });

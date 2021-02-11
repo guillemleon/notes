@@ -17,8 +17,15 @@ class Header extends PureComponent<any, any> {
             <View style={styles.headerContainer}>
                 <View style={styles.headerContainer}>
                     <LinearGradient colors={['#9E1711', '#D65D42']} style={styles.linearGradient} start={{ x: 2, y: 0 }} end={{ x: 0, y: 1 }}>
-                                    <Text style={styles.title}>NOTES</Text>
-                                </LinearGradient>
+                        <TouchableOpacity style={styles.lateral}>
+                            <Icon
+                                style={styles.menuIcon}
+                                name={'bars'}
+                            />
+                        </TouchableOpacity>
+                        <Text style={styles.title}>NOTES</Text>
+                        <View style={styles.lateral}/>
+                    </LinearGradient>
                 </View>
             </View>
         )
